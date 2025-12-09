@@ -1,0 +1,10 @@
+
+/* For Registration Form */
+.registration_header{
+    border-radius: 10px 10px 0 0;
+}
+
+.registration_form{
+    border-radius: 0 0 10px 10px;
+}
+/* ----------------------------- */
