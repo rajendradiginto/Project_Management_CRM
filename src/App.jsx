@@ -1,17 +1,17 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import Login from './components/auth/login.jsx'
-import Registration from './components/auth/Registration'
-import Dashboard from './components/dashboard/Dashboard.jsx'
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Login from './components/auth/login.jsx';
+import Registration from './components/auth/Registration';
+import DashboardPage from './Pages/Dashboard-Page.jsx';
 function App() {
 
   return (
     <>
-    <Routes>
-      <Route path='/' element={<Registration/>}/>
-      <Route path='/dashboard' element={<Dashboard/>}/>
-      <Route path='/login' element={<Login/>}/>
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Registration />} />
+        <Route path='/dashboard' element={<DashboardPage />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
     </>
   )
 }
