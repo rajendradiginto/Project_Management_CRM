@@ -1,0 +1,6 @@
+.sidebar_wrapper{
+    height: 100vh;
+    overflow: auto;
+    background-color: white;
+    border-right: 1px solid lightgray;
+}
