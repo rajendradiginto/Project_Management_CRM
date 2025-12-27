@@ -1,4 +1,6 @@
 import React from "react";
+import Styles from "../../styles/style.module.css";
+import { Link } from "react-router-dom";
 import loginHelper from "../../helper/login-helper";
 
 const Login = () => {
@@ -6,41 +8,53 @@ const Login = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-5 ">
-            <div className="card p-3">
-              <form onSubmit={handleFormSubmit}>
-                <h1>Login Page</h1>
-                <div className="mb-3 row">
-                  <label className="col-sm-3 col-form-label">Email</label>
-                  <div className="col-sm-9">
-                    <input
-                      onChange={handleFormChange}
-                      name="email"
-                      value={formData.email}
-                      type="email"
-                      className="form-control"
-                      placeholder="Enter your email"
-                    />
-                  </div>
-                </div>
-                <div className="mb-3 row">
-                  <label className="col-sm-3 col-form-label">Password</label>
-                  <div className="col-sm-9">
-                    <input
-                      onChange={handleFormChange}
-                      name="password"
-                      value={formData.password}
-                      type="password"
-                      className="form-control"
-                      placeholder="enter password"
-                    />
-                  </div>
-                </div>
-                <button className="btn btn-primary">Sign In</button>
-              </form>
-            </div>
+      <div className="container mt-5 ">
+        <div className="row justify-content-center text-center text-white">
+          <div className={`col-lg-5 bg-dark ${Styles.login_header}`}>
+            <h2>Sign In</h2>
+          </div>
+        </div>
+        <div className="row justify-content-center text-white">
+          <div className={`col-lg-5 bg-dark py-2 ${Styles.login_form}`}>
+            <form onSubmit={handleFormSubmit}>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                  Email
+                </label>
+                <input
+                  onChange={handleFormChange}
+                  name="email"
+                  value={formData.email}
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label">
+                  Password
+                </label>
+                <input
+                  onChange={handleFormChange}
+                  name="password"
+                  value={formData.password}
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  placeholder="Enter Password"
+                />
+              </div>
+
+              <button className="btn btn-primary w-100">Sign Up</button>
+
+              <p>
+                Don't have an account?{" "}
+                <span>
+                  <Link to={"/registration"}>Registration </Link>
+                </span>
+              </p>
+            </form>
           </div>
         </div>
       </div>

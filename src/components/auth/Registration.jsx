@@ -107,7 +107,7 @@ const Registration = () => {
               <p>
                 Already a user?{" "}
                 <span>
-                  <Link to={"/login"}>Login </Link>
+                  <Link to={"/"}>Login </Link>
                 </span>
               </p>
             </form>
