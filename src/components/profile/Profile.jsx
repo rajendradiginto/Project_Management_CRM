@@ -11,9 +11,9 @@ const Profile = () => {
           </div>
           <div className="col-lg-10">
             <h1 className="text-center h-25">Profile</h1>
-            <div className="row">
-              <div className="col-lg-3 p-3">
-                <div className="profile p-4 mt-3 rounded">
+            <div className="row px-5">
+              <div className="col-lg-4 p-3">
+                <div className="profile p-2">
                   <img src="#" alt="Profile-Img" />
                   <h2>Name...</h2>
                   <h5>username</h5>
@@ -96,6 +96,10 @@ const Profile = () => {
                 <div className="second_side_container">
                   <h3>Places you worked in</h3>
                   <div className="card">
+                    <h6>Company..</h6>
+                    <p>Role Description</p>
+                    <h6>Company..</h6>
+                    <p>Role Description</p>
                     <h6>Company..</h6>
                     <p>Role Description</p>
                   </div>  
