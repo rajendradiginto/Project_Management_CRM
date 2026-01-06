@@ -1,6 +1,33 @@
-.sidebar_wrapper{
-    height: 100vh;
-    overflow: auto;
-    background-color: white;
-    border-right: 1px solid lightgray;
+.sidebar_wrapper {
+  height: 100vh;
+  overflow: auto;
+  background-color: white;
+  border-right: 1px solid lightgray;
+}
+
+.tabs_row {
+  border-bottom: 1px solid gray;
+}
+
+.task_category_row {
+  flex-wrap: nowrap !important;
+  width: calc(100vw - 24%);
+  overflow: auto;
+  /* background-color: red !important; */
+  height: calc(100vh - 110px);
+}
+
+.task_setting_icon {
+  display: none;
+}
+
+.task_title_line:hover {
+  cursor: pointer !important;
+}
+
+.task_title_line > p:nth-child(1):hover {
+  background-color: rgba(78, 76, 76, 0.506);
+}
+.task_title_line:hover .task_setting_icon {
+  display: block;
 }
