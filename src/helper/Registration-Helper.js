@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postRegistrationData } from "../data-access/api/auth-api";
+import { useNavigate } from "react-router-dom";
 
 const registrationHelper = () => {
   const initialState = {
