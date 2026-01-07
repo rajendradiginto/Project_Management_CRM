@@ -13,7 +13,7 @@ const Dashboard = () => {
           <div className="col-lg-3">
             <nav class="nav">
               <Link className="nav-link text-dark" aria-current="page" href="#">Active</Link>
-              <Link className="nav-link text-dark" href="#">Link</Link>
+              <Link className="nav-link text-dark" to="/profile">Profile</Link>
               <Link className="nav-link text-dark" href="#">Link</Link>
             </nav>
           </div>

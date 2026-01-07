@@ -46,7 +46,7 @@ const Login = () => {
                 />
               </div>
 
-              <button className="btn btn-primary w-100">Sign Up</button>
+              <button className="btn btn-primary w-100">Sign In</button>
 
               <p>
                 Don't have an account?{" "}
