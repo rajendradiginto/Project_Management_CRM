@@ -11,6 +11,7 @@ const authSlice = createSlice({
     loading: false,
     error: null,
     message: null,
+    status: null,
   },
   reducers: {},
   extraReducers: (builder) => {
@@ -35,6 +36,7 @@ const authSlice = createSlice({
       .addCase(postLoginData.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.data;
+        state.status = action.payload.data.status;
         state.message = "Registration successful";
       })
       .addCase(postLoginData.rejected, (state, action) => {

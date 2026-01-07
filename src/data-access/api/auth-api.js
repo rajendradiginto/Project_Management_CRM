@@ -26,7 +26,6 @@ export const postLoginData = createAsyncThunk(
       if(data.status === 201){
         localStorage.setItem("authToken", data.data.token);
       }
-      console.log(data);
       return thunkAPI.fulfillWithValue(data);
     } catch (error) {
       return thunkAPI.rejectWithValue("Something went wrong", error);

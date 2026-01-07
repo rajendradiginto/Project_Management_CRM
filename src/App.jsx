@@ -6,6 +6,7 @@ import DashboardPage from "./Pages/Dashboard-Page.jsx";
 import Profile from "./components/profile/Profile.jsx";
 import { useEffect, useState } from "react";
 import Landing from "./components/landing-page/Landing.jsx";
+import ProtectedRoute from './components/routes/ProtectedRoute.jsx';
 function App() {
   const [authToken, setAuthToken] = useState(false);
 
@@ -20,10 +21,18 @@ function App() {
     <>
       <Routes>
         <Route path="/registration" element={<Registration />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/" element={<Landing />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path='/profile' element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        } />
+        <Route path='/' element={
+          <ProtectedRoute>
+            <DashboardPage />
+          </ProtectedRoute>
+        } />
       </Routes>
     </>
   );
