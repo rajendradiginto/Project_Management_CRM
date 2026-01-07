@@ -14,6 +14,7 @@ const registrationHelper = () => {
   const [formData, setFormData] = useState(initialState);
   const authStore = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -43,6 +44,12 @@ const registrationHelper = () => {
     }
     dispatch(postRegistrationData(formData));
   };
+
+  useEffect(() => {
+    if (authStore.status === 201) {
+      navigate("/");
+    }
+  }, [authStore]);
 
   return { formData, handleFormChange, handleFormSubmit };
 };
