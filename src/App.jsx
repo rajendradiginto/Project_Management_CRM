@@ -22,13 +22,13 @@ function App() {
       <Routes>
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/landing" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path='/profile' element={
           <ProtectedRoute>
             <Profile />
           </ProtectedRoute>
         } />
-        <Route path='/' element={
+        <Route path='/dashboard' element={
           <ProtectedRoute>
             <DashboardPage />
           </ProtectedRoute>

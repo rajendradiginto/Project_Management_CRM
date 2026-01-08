@@ -7,7 +7,7 @@ const DashboardSidebar = () => {
             <div className={Styles.sidebar_wrapper}>
                 <ul className={`list-group rounded-0`}>
                     <li className="list-group-item list-group-item-action">
-                        <Link to={'/'} className="nav-link">
+                        <Link to={'/dashboard'} className="nav-link">
                             <b>Dashboard</b>
                         </Link>
                     </li>

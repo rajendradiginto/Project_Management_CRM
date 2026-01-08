@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postRegistrationData } from "../data-access/api/auth-api";
 import { useNavigate } from "react-router-dom";
@@ -47,8 +47,8 @@ const registrationHelper = () => {
   };
 
   useEffect(() => {
-    if (authStore.status === 201) {
-      navigate("/");
+    if (authStore.status === 200) {
+      navigate("/dashboard");
     }
   }, [authStore]);
 

@@ -23,6 +23,7 @@ const authSlice = createSlice({
       .addCase(postRegistrationData.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload.data;
+        state.status = action.payload.data.status;
         state.message = "Registration successful";
       })
       .addCase(postRegistrationData.rejected, (state, action) => {
