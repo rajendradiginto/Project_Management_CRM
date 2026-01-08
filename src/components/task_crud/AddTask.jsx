@@ -6,7 +6,7 @@ const AddTask = ({ taskType }) => {
         <>
             <div className="row">
                 <div className="col-12">
-                    <div className="card p-3 bg-dark h-100 text-white">
+                    <div className={`card p-3 bg-dark h-100 text-white ${Styles.addTasksCard}`}>
                         <div className={`d-flex justify-content-between ${Styles.task_title_line}`}>
                             <p className='w-75 px-2 rounded-1'>IDEA</p>
                             <p className={Styles.task_setting_icon}>
@@ -15,8 +15,7 @@ const AddTask = ({ taskType }) => {
                                 </svg>
                             </p>
                         </div>
-                        <h3>Tasks</h3>
-                        <p>Coming Soon......</p>
+                        <button className={`${Styles.addTaskBtn}`}>+ Create</button>
                     </div>
                 </div>
             </div>
