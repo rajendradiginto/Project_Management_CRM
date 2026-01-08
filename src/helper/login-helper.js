@@ -32,7 +32,7 @@ const loginHelper = () => {
 
     useEffect(() => {
         if(authStore.status === 201){
-            navigate("/");
+            navigate("/dashboard");
         }
     },[authStore])
     
