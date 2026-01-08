@@ -1,70 +1,60 @@
 import { Link } from "react-router-dom";
+import landingimg from "../../assets/Images/taskmanagementblur.jpg";
+import scattered from "../../assets/Images/scattered.png";
+import missdeadlines from "../../assets/Images/missdeadlines.png";
+import visibility from "../../assets/Images/visibility.png";
+import student from "../../assets/Images/student.png";
+import developers from "../../assets/Images/developers.png";
+import teams from "../../assets/Images/teams.png";
+import manager from "../../assets/Images/manager.png";
+import productivity from "../../assets/Images/productivity.png";
+import deadline from "../../assets/Images/deadline.png";
+import collaboration from "../../assets/Images/collaboration.png";
+import ease from "../../assets/Images/ease.png";
 
 const Landing = () => {
   return (
     <>
-      <div className="container-fluid bg-dark">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-12 bg-dark">
-            <nav class="navbar navbar-expand-lg bg-dark">
+          <div className="col-12">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">
-                  Project Management Tool
+                <a class="navbar-brand" href="#">
+                  Project Management App
                 </a>
                 <button
                   class="navbar-toggler"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div
-                  class="collapse navbar-collapse"
-                  id="navbarSupportedContent"
-                >
-                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                      <a
-                        class="nav-link active text-white"
-                        aria-current="page"
-                        href="#"
-                      >
+                      <a class="nav-link active" aria-current="page" href="#">
                         Home
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link text-white" href="#">
-                        Link
+                      <a class="nav-link" href="#">
+                        Features
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a
-                        class="nav-link text-white" href="#"
-                      >
+                      <a class="nav-link" href="#">
+                        Pricing
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " aria-disabled="true">
                         Disabled
                       </a>
-                    </li>
-                    <li class="nav-item ms-2 me-3">
-                        <a className="nav-link text-white" href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-brightness-high"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-                      </svg> </a>
-                    </li>
-                    <li class="nav-item">
-                      <Link to={"/login"}>
-                        <button class="btn btn-primary">Get Started</button>
-                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -73,55 +63,163 @@ const Landing = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-9 mx-auto text-center">
-            <div className="text-white mt-5">
-              <h1>Welcome to Project Management Tool</h1>
-              <p>
-                Manage your projects efficiently and effectively with your team.
-              </p>
-              <Link to={"/login"}>
-                <button className="btn btn-primary">Get Started</button>
-              </Link>
+          <div className="col-lg-5 ms-5 justify-content-center d-flex flex-column">
+            <h1>Manage Projects. Track Progress. Deliver Faster.</h1>
+            <p>A simple project management tool for teams and individuals.</p>
+            <Link to={'/login'}>
+            <button className="btn btn-primary w-25">Get Started</button>
+            </Link>
+          </div>
+          <div className="col-lg-5 ms-5">
+            <img
+              src={landingimg}
+              alt="Project Management"
+              className="img-fluid h-100"
+            />
+          </div>
+        </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-12 text-center">
+            <h2>Chaos to Clarity</h2>
+            <p>All your tasks, deadlines & team communication in one place.</p>
+          </div>
+          <div className="row justify-content-center text-center mt-3 mb-5">
+            <div className="col-lg-3">
+              <img src={scattered} alt="Scattered Tasks" />
+              <h3>Scattered Tasks</h3>
+              <p>No more messy notes & chats.</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={missdeadlines} alt="Missed Deadlines" />
+              <h3>Missed Deadlines</h3>
+              <p>Stay on track with ease.</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={visibility} alt="No Visibility" />
+              <h3>No Visibility</h3>
+              <p>See who's doing what.</p>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-6 justify-content-center text-center mx-auto">
+            <h2>Core Feature</h2>
+          </div>
+          <div className="row justify-content-center text-center mt-3">
+            <div className="col-lg-3">
+              <div className="card">
+                <h4>Task Management</h4>
+                <p>Organize & prioritize tasks.</p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h4>Team Collaboration</h4>
+                <p>Assign & communicate.</p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h4>Progress Tracking</h4>
+                <p>Monitor project milestones.</p>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h4>Secure Access</h4>
+                <p>Safe & reliable login.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-6 justify-content-center text-center mx-auto">
+            <h2>How It Works</h2>
+          </div>
+          <div className="row justify-content-center text-center mt-3">
+            <div className="col-lg-3">
+              <div className="card">
+                <h5>1. Sign Up/Sign In ></h5>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h5>2. Create a Project ></h5>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h5>3. Add Tasks & Team ></h5>
+              </div>
+            </div>
+            <div className="col-lg-3">
+              <div className="card">
+                <h5>4. Track Progress ></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-6 justify-content-center text-center mx-auto">
+            <h2>Who Is It For?</h2>
+          </div>
+          <div className="row justify-content-center text-center mt-3">
+            <div className="col-lg-3">
+              <img src={student} alt="Student Image" height={150} />
+              <p>Students</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={developers} alt="Developers Image" height={150} />
+              <p>Developers</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={teams} alt="Teams Image" height={150} />
+              <p>Small Teams</p>
+            </div>
+
+            <div className="col-lg-3">
+              <img src={manager} alt="Managers Image" height={150} />
+              <p>Project Managers</p>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-lg-6 justify-content-center text-center mx-auto">
+            <h2>Why Choose Us?</h2>
+          </div>
+          <div className="row justify-content-center text-center mt-3">
+            <div className="col-lg-3">
+              <img src={productivity} alt="Boost Productivity" height={130} />
+              <p>Boost Productivity</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={deadline} alt="Never Miss Deadlines" height={130} />
+              <p>Never Miss Deadlines</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={collaboration} alt="Better Collaboration" height={130} />
+              <p>Better Collaboration</p>
+            </div>
+            <div className="col-lg-3">
+              <img src={ease} alt="Easy to Use" height={130} />
+              <p>Easy to Use</p>
             </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-10 text-white mt-5">
-            <h2>Features</h2>
-            <p>
-              Our tool offers a variety of features to help you manage your
-              projects:
-            </p>
-            <ul className="list-unstyled">
-              <li>Task Management</li>
-              <li>Team Collaboration</li>
-              <li>Progress Tracking</li>
-              <li>Reporting and Analytics</li>
-            </ul>
+          <div className="col-lg-12 text-center justify-content-center mx-auto">
+            <h3>Ready to Get Started?</h3>
+            <p>Sign up today and take control of your projects!</p>
+          </div>
+          <div className="col-lg-6 text-center justify-content-center mx-auto mb-5">
+            <Link to={'/login'}>
+            <button className="btn btn-primary btn-lg">Get Started</button>
+            </Link>
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-10 text-white mt-5">
-            <h2>About Us</h2>
-            <p>
-              We are dedicated to providing the best project management
-              experience for teams of all sizes. Our mission is to help teams
-              collaborate and achieve their goals efficiently.
-            </p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-10 text-white mt-5 mb-5">
-            <h2>Contact Us</h2>
-            <p>
-              If you have any questions or would like to learn more about our
-              tool, please feel free to reach out to us at-
-            </p>
-          </div>
-          <div className="row">
-            <div className="col-lg-12 text-center text-white mt-5 mb-3">
-              <p>&copy; 2025 Project Management Tool. All rights reserved.</p>
-            </div>
+          <div className="col-12 text-center p-3">
+            <p>&copy; 2025 Project Management App. All rights reserved.</p>
           </div>
         </div>
       </div>
