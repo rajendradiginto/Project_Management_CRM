@@ -139,22 +139,22 @@ const Landing = () => {
           <div className="row justify-content-center text-center mt-3">
             <div className="col-lg-3">
               <div className="card">
-                <h5>1. Sign Up/Sign In ></h5>
+                <h5>1. Sign Up/Sign In {'>'}</h5>
               </div>
             </div>
             <div className="col-lg-3">
               <div className="card">
-                <h5>2. Create a Project ></h5>
+                <h5>2. Create a Project {'>'} </h5>
               </div>
             </div>
             <div className="col-lg-3">
               <div className="card">
-                <h5>3. Add Tasks & Team ></h5>
+                <h5>3. Add Tasks & Team {'>'} </h5>
               </div>
             </div>
             <div className="col-lg-3">
               <div className="card">
-                <h5>4. Track Progress ></h5>
+                <h5>4. Track Progress {'>'} </h5>
               </div>
             </div>
           </div>
