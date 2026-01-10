@@ -52,6 +52,10 @@
 .inputBoxToAddTask {
   background-color: rgba(80, 78, 78, 0.425);
   border-radius: 9px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .inputBoxToAddTask > input {

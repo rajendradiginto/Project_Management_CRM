@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Styles from "../../styles/dashboard_style.module.css";
+import { FaMoneyBill, FaRegCalendarAlt, FaRegUserCircle, FaRegCheckCircle } from "react-icons/fa";
+
 
 const ToDoTask = () => {
   const [displayBox, setDisplayBox] = useState(false);
+  const inputBoxRef = useRef(null);
+
   const showInputBox = () => {
     setDisplayBox(!displayBox);
   }
-  console.log(displayBox);
+
+  // Here I am detecting the click event outside of the div box which is for adding task....
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (inputBoxRef.current && !inputBoxRef.current.contains(event.target)) {
+        setDisplayBox(false);
+      }
+    };
+
+    if (displayBox) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [displayBox]);
   return (
     <>
       <div className="row">
@@ -21,17 +40,25 @@ const ToDoTask = () => {
               </p>
             </div>
             {
-              displayBox !== true ?
-                <button className={`${Styles.addTaskBtn}`} onClick={showInputBox}>+ Create</button>
-                : null
+              !displayBox &&
+              <button className={`${Styles.addTaskBtn}`} onClick={showInputBox}>+ Create</button>
             }
             {!!displayBox &&
-              <div className={Styles.inputBoxToAddTask}>
+              <div className={Styles.inputBoxToAddTask} ref={inputBoxRef}>
                 <input type="text" placeholder='What Needs to be Done!' className='form-control' />
-                <div>
-                  <span>I</span>
-                  <span>I</span>
-                  <span>I</span>
+                <div className='d-flex align-items-center'>
+                  <span className='me-4 ms-2 fs-4'>
+                    <FaMoneyBill />
+                  </span>
+                  <span className='me-4 fs-5'>
+                    <FaRegCalendarAlt />
+                  </span>
+                  <span className='me-auto fs-5'>
+                    <FaRegUserCircle />
+                  </span>
+                  <span className='me-2 fs-5'>
+                    <FaRegCheckCircle />
+                  </span>
                 </div>
               </div>}
           </div>
